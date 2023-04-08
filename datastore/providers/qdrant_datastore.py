@@ -67,6 +67,7 @@ class QdrantDataStore(DataStore):
             for _, chunks in chunks.items()
             for chunk in chunks
         ]
+        
         self.client.upsert(
             collection_name=self.collection_name,
             points=points,  # type: ignore
