@@ -1,19 +1,19 @@
 {
   "schema_version": "v1",
-  "name_for_model": "retrieval",
-  "name_for_human": "Retrieval Plugin",
-  "description_for_model": "Plugin for searching through the user's documents (such as files, emails, and more) to find answers to questions and retrieve relevant information. Use it whenever a user asks something that might be found in their personal information.",
-  "description_for_human": "Search through your documents.",
+  "name_for_model": "owis_knowledge_database",
+  "name_for_human": "OWIS",
+  "description_for_model": "Use this plugin to get up to date information about OWIS system.",
+  "description_for_human": "Up to date information about OWIS system.",
   "auth": {
     "type": "user_http",
     "authorization_type": "bearer"
   },
   "api": {
     "type": "openapi",
-    "url": "https://your-app-url.com/.well-known/openapi.yaml",
+    "url": "https://sea-lion-app-7xvni.ondigitalocean.app/.well-known/openapi.yaml",
     "has_user_authentication": false
   },
-  "logo_url": "https://your-app-url.com/.well-known/logo.png",
+  "logo_url": "https://sea-lion-app-7xvni.ondigitalocean.app/.well-known/logo.png",
   "contact_email": "hello@contact.com", 
   "legal_info_url": "http://example.com/legal-info"
 }
