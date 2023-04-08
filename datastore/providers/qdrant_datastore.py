@@ -20,7 +20,7 @@ import qdrant_client
 
 from services.date import to_unix_timestamp
 
-QDRANT_URL = os.environ.get("QDRANT_URL", "http://localhost")
+QDRANT_URL = os.environ.get("QDRANT_URL", "http://owis.com")
 QDRANT_PORT = os.environ.get("QDRANT_PORT", "6334")
 QDRANT_GRPC_PORT = os.environ.get("QDRANT_GRPC_PORT", "6333")
 QDRANT_API_KEY = os.environ.get("QDRANT_API_KEY")
@@ -67,7 +67,7 @@ class QdrantDataStore(DataStore):
             for _, chunks in chunks.items()
             for chunk in chunks
         ]
-        
+
         self.client.upsert(
             collection_name=self.collection_name,
             points=points,  # type: ignore
