@@ -21,8 +21,8 @@ import qdrant_client
 from services.date import to_unix_timestamp
 
 QDRANT_URL = os.environ.get("QDRANT_URL", "http://localhost")
-QDRANT_PORT = os.environ.get("QDRANT_PORT", "6333")
-QDRANT_GRPC_PORT = os.environ.get("QDRANT_GRPC_PORT", "6334")
+QDRANT_PORT = os.environ.get("QDRANT_PORT", "6334")
+QDRANT_GRPC_PORT = os.environ.get("QDRANT_GRPC_PORT", "6333")
 QDRANT_API_KEY = os.environ.get("QDRANT_API_KEY")
 QDRANT_COLLECTION = os.environ.get("QDRANT_COLLECTION", "document_chunks")
 
@@ -50,7 +50,6 @@ class QdrantDataStore(DataStore):
             port=int(QDRANT_PORT),
             grpc_port=int(QDRANT_GRPC_PORT),
             api_key=QDRANT_API_KEY,
-            prefer_grpc=True,
             timeout=10,
         )
         self.collection_name = collection_name or QDRANT_COLLECTION
